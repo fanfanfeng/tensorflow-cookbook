@@ -56,8 +56,8 @@ with tf.Session() as sess:
 ops.reset_default_graph()
 with tf.Session() as sess:
     batch_size = 25
-    x_vals = np.concatenate((np.random.normal(-1,1,50),np.random.normal(1,1,50)))
-    y_vals  = np.concatenate((np.repeat(0,50),np.repeat(1.,50)))
+    x_vals = np.concatenate((np.random.normal(-1,1,50),np.random.normal(2,1,50)))
+    y_vals  = np.concatenate((np.repeat(0.,50),np.repeat(1.,50)))
     x_data  = tf.placeholder(shape=[1,None],dtype=tf.float32)
     y_target = tf.placeholder(shape=[1,None],dtype=tf.float32)
 
